@@ -4,8 +4,12 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
+import android.util.Log
 
 import com.google.android.gms.vision.barcode.Barcode
+import larsson.silver.kotlin.models.outpan.Product
+import larsson.silver.kotlin.network.ApiHandler
+import larsson.silver.kotlin.network.OutpanListener
 
 /**
  * Graphic instance for rendering barcode position, size, and ID within an associated graphic
@@ -38,6 +42,24 @@ internal class BarcodeGraphic(overlay: GraphicOverlay) : TrackedGraphic<Barcode>
      */
     internal override fun updateItem(barcode: Barcode) {
         mBarcode = barcode
+        /* TODO works. should stop barcode searcher..
+        ApiHandler.getProduct(barcode.displayValue, object: OutpanListener {
+            override fun onSuccess(product: Product) {
+                Log.e("BarcodeGraphic", "Product: " + product);
+            }
+
+            override fun onFailure(code: Int) {
+                Log.e("BarcodeGraphic", "onFailure code: " + code);
+
+            }
+
+            override fun onFailure(code: String) {
+                Log.e("BarcodeGraphic", "onFailure code: " + code);
+
+            }
+
+        })
+        */
         postInvalidate()
     }
 
