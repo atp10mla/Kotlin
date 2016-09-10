@@ -9,9 +9,6 @@ import larsson.silver.kotlin.view.views.MainView
 
 import kotlinx.android.synthetic.main.activity_main.*
 
-/**
- * Created by markus on 16-09-10.
- */
 class MainActivity : AppCompatActivity(), MainView {
 
     private val mMainPresenter: MainPresenter = MainPresenter(this)
