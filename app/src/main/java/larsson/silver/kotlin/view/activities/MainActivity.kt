@@ -10,13 +10,16 @@ import larsson.silver.kotlin.presenter.MainPresenter
  */
 class MainActivity : AppCompatActivity() {
 
-    val mMainPresenter: MainPresenter? = null
+    lateinit var mMainPresenter: MainPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        if(mMainPresenter == null) {
+            mMainPresenter = MainPresenter();
+        }
+        mMainPresenter.onCreate();
 
     }
 
