@@ -6,6 +6,9 @@ import larsson.silver.kotlin.R
 import larsson.silver.kotlin.presenter.MainPresenter
 import larsson.silver.kotlin.view.views.MainView
 
+
+import kotlinx.android.synthetic.main.activity_main.*
+
 /**
  * Created by markus on 16-09-10.
  */
@@ -16,6 +19,7 @@ class MainActivity : AppCompatActivity(), MainView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(xToolbar);
 
         mMainPresenter.onCreate()
     }
