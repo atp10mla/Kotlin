@@ -20,13 +20,17 @@
 
 
         <activity android:name=".view.activities.MainActivity">
+        </activity>
+        <activity android:name=".view.activities.DetailActivity"></activity>
+
+        <activity android:name=".view.activities.BarcodeScannerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activities.DetailActivity"></activity>
+
     </application>
 
 </manifest>
