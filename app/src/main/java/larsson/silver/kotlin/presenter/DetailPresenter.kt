@@ -17,6 +17,6 @@ class DetailPresenter(detailView: DetailView) {
     }
 
     fun onDestroy(){
-
+        mDetailView = null
     }
 }
